@@ -44,13 +44,17 @@ Cross-platform mobile application for exploring luxury cars with interactive 3D 
 
 ## 🚀 Setup & Run
 
+### Quick Start
+
+**📖 For detailed setup instructions, see [SETUP_GUIDE.md](SETUP_GUIDE.md)**
+
 ### Prerequisites
 - Flutter SDK >= 3.10.0
 - Dart SDK >= 3.10.0
 - Android Studio / VS Code
 - Supabase account (free tier available)
 
-### Installation
+### Installation (5 Steps)
 
 1. **Clone the repository:**
 ```bash
@@ -63,15 +67,21 @@ cd exotic-auto-showroom-3d
 flutter pub get
 ```
 
-3. **Configure Supabase:**
-   - Copy `.env.example` to `.env`
-   - Add your Supabase credentials:
+3. **Set up Supabase Backend:**
+   - Create a Supabase project at https://supabase.com
+   - Run `supabase_setup.sql` in SQL Editor to create tables
+   - Follow `STORAGE_SETUP.md` to create storage buckets
+   - Copy `.env.example` to `.env` and add your credentials:
 ```env
 SUPABASE_URL=your_supabase_project_url
 SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-4. **Run the app:**
+4. **Add sample data:**
+   - Upload car images to Supabase Storage
+   - Add car data to database tables (see `SETUP_GUIDE.md`)
+
+5. **Run the app:**
 ```bash
 # Debug mode
 flutter run
@@ -79,6 +89,12 @@ flutter run
 # Release APK
 flutter build apk --release
 ```
+
+### 📚 Setup Documentation
+
+- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** - Complete step-by-step setup guide
+- **[supabase_setup.sql](supabase_setup.sql)** - SQL script to create all database tables
+- **[STORAGE_SETUP.md](STORAGE_SETUP.md)** - Guide for setting up Supabase Storage buckets
 
 ---
 

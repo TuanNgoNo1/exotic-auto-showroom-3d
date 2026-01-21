@@ -1,0 +1,27 @@
+# Flutter Launcher Icons Configuration
+# Run: flutter pub run flutter_launcher_icons
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  
+  # Icon chính (có nền đen) - dùng cho iOS và Android legacy
+  image_path: "assets/icons/app_icon_foreground.png"
+  
+  # Android Adaptive Icon (Android 8.0+)
+  # Background: màu đen
+  # Foreground: xe + vòng vàng (transparent)
+  adaptive_icon_background: "#0D0D0D"
+  adaptive_icon_foreground: "assets/icons/app_icon_foreground.png"
+  
+  # iOS specific  
+  remove_alpha_ios: true
+  
+  # Web
+  web:
+    generate: true
+    image_path: "assets/icons/app_icon_foreground.png"
+    background_color: "#0D0D0D"
+    theme_color: "#FFD700"
+
+# Chạy lệnh: flutter pub run flutter_launcher_icons

@@ -1,0 +1,24 @@
+# Flutter Native Splash Configuration
+# Tắt native splash - chỉ dùng màn đen để chuyển nhanh sang Flutter splash
+
+flutter_native_splash:
+  # Background màu đen - không có image
+  color: "#0D0D0D"
+  
+  # Không dùng image cho native splash
+  # image: assets/icons/splash_logo.png
+  
+  # Android 12+ specific - chỉ màu đen
+  android_12:
+    color: "#0D0D0D"
+    # Không có icon
+    
+  # Platform specific
+  android: true
+  ios: true
+  web: false
+
+  # Fullscreen mode
+  fullscreen: true
+
+# Chạy: dart run flutter_native_splash:create
